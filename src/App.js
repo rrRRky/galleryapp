@@ -38,12 +38,19 @@ const { Employees, searchFeild} = this.state;
 const { onSearchChange} =this;
 
     const filetrEmployees = Employees.filter((Employee)=>{
-      return Employee.username.toLocaleLowerCase().includes(searchFeild);
+      return Employee.name.toLocaleLowerCase().includes(searchFeild);
     });
   return (
     <div className="App">
-      <SearchBox onChangeHandler={onSearchChange} placeholder='search Employee' ClassName='search-box' />
-      <CardList Employees = { filetrEmployees } anything = {['a', 'b']}/>
+      <h1 className='app-title'>DECO-WINDOW</h1>
+      <SearchBox 
+        className='employees-search-box'
+        onChangeHandler={onSearchChange} 
+        placeholder='search Employee'
+      />
+      <CardList 
+        Employees = { filetrEmployees } 
+      />
     </div>
   );
   }
