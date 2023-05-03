@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './App.css';
 import CardList from './components/card-lists/card-list.component';
-
+import SearchBox from './components/search-box/search-box.component';
 class App extends Component {
 
   constructor(){
@@ -42,19 +42,7 @@ const { onSearchChange} =this;
     });
   return (
     <div className="App">
-      <input 
-      className='search-box' 
-      type='search' 
-      placeholder='Search Employee' 
-      onChange={onSearchChange} 
-      />
-      {/* {
-        filetrEmployees.map((Employee) => {
-          return( <div key={Employee.id}>
-                    <h1>{Employee.username}</h1>
-                  </div>);
-        })
-      } */}
+      <SearchBox onChangeHandler={onSearchChange} placeholder='search Employee' ClassName='search-box' />
       <CardList Employees = { filetrEmployees } anything = {['a', 'b']}/>
     </div>
   );

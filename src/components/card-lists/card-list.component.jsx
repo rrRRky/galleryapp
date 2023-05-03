@@ -2,10 +2,9 @@ import { Component } from "react";
 
 class CardList extends Component {
     render(){
-
+        console.log(this.props.Employees);
+        console.log('render from CardList');
         const { Employees } = this.props
-
-        console.log(this.props)
         return (
         <div>
             {Employees.map((Employee) => (
