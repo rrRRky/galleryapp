@@ -29,3 +29,8 @@
     margin-bottom: 3px;
     margin-top: 3px;
   }
+  .card-container img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
