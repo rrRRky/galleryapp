@@ -9,6 +9,9 @@ const App = () => {
   const[searchFeild, setSearchField] = useState('a');   // [value, detValue]
   const [Employees, setEmployees] = useState([]);
   const [filteredEmployees, setFilteredEmployees] = useState(Employees);
+  
+  console.log('rendered');
+  
   useEffect (()=> {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) =>  response.json())
