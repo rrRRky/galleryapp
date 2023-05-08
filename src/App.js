@@ -13,7 +13,8 @@ const App = () => {
   console.log('rendered');
   
   useEffect (()=> {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('http://192.168.103.141:1010/api/List')
     .then((response) =>  response.json())
     .then((users) => setEmployees(users));
   }, []);
