@@ -1,15 +1,13 @@
 // import { Component } from "react";
 import './card.styles.css';
 
-const Card = ({Employee}) => {
-    const {name,city,age,id} = Employee;
+    const Card = ({Employee}) => {
+    const {name,ImgUrl,price,id} = Employee;
     return(
         <div className="card-container" key={id}>
-            <img alt={`Employee ${name}`}  src={`https://robohash.org/${id}?set=set2&size=180x180`} />  
+            <img alt={`Employee ${name}`}  src={ImgUrl} />  
             <h2>{name}</h2>
-            <h5>{city}</h5>
-            <p>{age}</p>
-            {/* <p>{city} ,{zipcode}</p> */}
+            <h5>{price}</h5>
         </div>
     );
 };
